@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10/07</title>
+</head>
+<script>
+function  div () {
+    X = x.value 
+    Y = y.value
+    conta = X/Y
+    resultado = conta
+    cont.innerHTML = (`N = m/M <br> N = ${X}/${Y} <br> N = ${resultado}`)
+}
+</script>
+<body>
+    <form>
+        Digite o valor de m:
+        <input type="number" id="x" name="x">
+        <br>
+        Digite o valor de M:
+        <input type="number" id="y" name="y">
+        <br>
+        <input type="button" value="Dividir" onclick="div()">
+    </form>
+    <p id="cont">N = m/M</p>
+</body>
+</html>
