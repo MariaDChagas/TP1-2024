@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <title>Calculadora</title>
  </head>
+
  <body>
   <h1>Digite dois números:</h1>
   <form action="/soma" method="get">
@@ -13,6 +14,7 @@
    <button type="submit">Somar</button>
   </form>
   <br>
+
   <form action="/sub" method="get">
     <label> Número 1: </label>
     <input id= "n1" name="n1"/>
@@ -21,6 +23,7 @@
     <button type="submit">Subtrair</button>
    </form>
    <br>
+
    <form action="/mult" method="get">
     <label> Número 1: </label>
     <input id= "n1" name="n1"/>
@@ -29,6 +32,7 @@
     <button type="submit">Multiplicar</button>
    </form>
    <br>
+
    <form action="/div" method="get">
     <label> Número 1: </label>
     <input id= "n1" name="n1"/>
@@ -36,7 +40,8 @@
     <input id= "n2" name="n2"/>
     <button type="submit">Dividir</button>
    </form>
+
   <h1>Resultado:</h1>
-  <h1 id="resultado"></h1>
+  <h1 id="resultado"><%=resultado%></h1>
  </body>
 </html>
