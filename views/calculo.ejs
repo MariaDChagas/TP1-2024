@@ -2,48 +2,45 @@
  <head>
   <meta charset="UTF-8">
   <title>Calculadora</title>
+  <link rel="stylesheet" href="index.css">
  </head>
 
  <body>
   <%- include("cabec")%>
-  <h1>Digite dois números:</h1>
-  <form action="/soma" method="get">
+  <h2>Digite dois números:</h2>
+
+  <form id="formi" action="/" method="post">
    <label> Número 1: </label>
    <input id= "n1" name="n1"/>
+   <br>
    <label> Número 2: </label>
    <input id= "n2" name="n2"/>
-   <button type="submit">Somar</button>
+   <br>
+   <br>
+   <input type="button" onclick="erro('/soma')" value="+"></input>
+   <input type="button" onclick="erro('/sub')" value="-"></input>
+   <input type="button" onclick="erro('/mult')" value="X"></input>
+   <input type="button" onclick="erro('/div')" value="/"></input>
   </form>
-  <br>
 
-  <form action="/sub" method="get">
-    <label> Número 1: </label>
-    <input id= "n1" name="n1"/>
-    <label> Número 2: </label>
-    <input id= "n2" name="n2"/>
-    <button type="submit">Subtrair</button>
-   </form>
-   <br>
-
-   <form action="/mult" method="get">
-    <label> Número 1: </label>
-    <input id= "n1" name="n1"/>
-    <label> Número 2: </label>
-    <input id= "n2" name="n2"/>
-    <button type="submit">Multiplicar</button>
-   </form>
-   <br>
-
-   <form action="/div" method="get">
-    <label> Número 1: </label>
-    <input id= "n1" name="n1"/>
-    <label> Número 2: </label>
-    <input id= "n2" name="n2"/>
-    <button type="submit">Dividir</button>
-   </form>
-
-  <h1>Resultado:</h1>
+  <h1 id="resultado">Resultado:</h1>
   <h1 id="resultado"><%=resultado%></h1>
-  <%- include("ropade")%>
+  <script>
+    function erro (rota) {
+     formi.action = rota 
+     if(n1.value == '' || n2.value == ''){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Não deixe um espaço vazio!')
+     } else {
+      if(n2.value == 0 && rota == "/div"){
+      document.getElementById ('resultado').innerHTML = ''
+      alert('Digite um valor diferente de zero!')
+      } else {
+        formi.submit()
+      }
+     }
+    }
+  </script>
+  <%- include("rodape")%>
  </body>
 </html>
