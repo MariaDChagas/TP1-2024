@@ -4,24 +4,47 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    }
+}
     
+div{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    height: 80%;
+    background-color:rgb(182, 180, 180);
+    border: solid 10px  black;
+    border-radius: 15px;
+    
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#rodape2{
+    font-size: 20pt;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
 h1 {
     font-size: 36px;
     color: #fffafa;
     text-align: center;
+    margin: 0;
     padding: 20px 0;
-    background-color: #f11212;
-    }
+    background-color:rgb(61, 61, 61);
+}
 
 h2 {
     font-size: 30px;
     color: black;
     padding: 20px 0;
     
-    }
-
+}
 #resultado {
- background-color: #333;
+    margin-top: 20%;
 }
     

@@ -6,41 +6,37 @@
  </head>
 
  <body>
-  <%- include("cabec")%>
-  <h2>Digite dois números:</h2>
-
-  <form id="formi" action="/" method="post">
-   <label> Número 1: </label>
-   <input id= "n1" name="n1"/>
-   <br>
-   <label> Número 2: </label>
-   <input id= "n2" name="n2"/>
-   <br>
-   <br>
-   <input type="button" onclick="erro('/soma')" value="+"></input>
-   <input type="button" onclick="erro('/sub')" value="-"></input>
-   <input type="button" onclick="erro('/mult')" value="X"></input>
-   <input type="button" onclick="erro('/div')" value="/"></input>
-  </form>
-
-  <h1 id="resultado">Resultado:</h1>
-  <h1 id="resultado"><%=resultado%></h1>
+  <div>
+    <%- include("cabec")%>
+    <form id="formi" action="/" method="post">
+      <h2>Digite dois números</h2>
+     <label> Número 1: </label>
+     <input id= "n1" name="n1"/>
+     <br>
+     <label> Número 2: </label>
+     <input id= "n2" name="n2"/>
+     <br>
+     <br>
+     <input type="button" onclick="erro('/soma')" value="+"></input>
+     <input  type="button" onclick="erro('/sub')" value="-"></input>
+     <input type="button" onclick="erro('/mult')" value="X"></input>
+     <input type="button" onclick="erro('/div')" value="/"></input>
+    </form>
+    <h2 id="resultado">Resultado:<%=resultado%></h2>
+    <%- include("rodape")%>
+  </div>
+  
   <script>
     function erro (rota) {
      formi.action = rota 
      if(n1.value == '' || n2.value == ''){
       document.getElementById ('resultado').innerHTML = ''
       alert('Não deixe um espaço vazio!')
-     } else {
-      if(n2.value == 0 && rota == "/div"){
-      document.getElementById ('resultado').innerHTML = ''
-      alert('Digite um valor diferente de zero!')
       } else {
         formi.submit()
       }
      }
-    }
+    
   </script>
-  <%- include("rodape")%>
  </body>
 </html>
