@@ -1,0 +1,27 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
+    
+h1 {
+    font-size: 36px;
+    color: #fffafa;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f11212;
+    }
+
+h2 {
+    font-size: 30px;
+    color: black;
+    padding: 20px 0;
+    
+    }
+
+#resultado {
+ background-color: #333;
+}
+    
